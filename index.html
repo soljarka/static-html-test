@@ -41,7 +41,14 @@
                 method: 'share_open_graph',
                 action_type: 'og.shares',
                 action_properties: JSON.stringify({
-                   object: '{\"og:type\":\"place\",\"og:url\":\"https:\/\/soljarka.herokuapp.com\/index.html\",\"og:title\":\"Sample Place\",\"og:image\":\"https:\/\/soljarka.herokuapp.com\/kitten.jpg\",\"og:image:width\":230,\"og:image:height\":345,\"place:location\":{\"latitude\":56.946285,\"longitude\":24.105078},\"og:description\":\"test description\"}'
+                   object: {
+                        "og:type": "place",
+                        "og:title": "Sample Place",
+                        "place:location": {
+                            "latitude": 56.946285,
+                            "longitude": 24.105078
+                        }
+                    }
                 }),
             }, function (response) {
                 // Debug response (optional)
